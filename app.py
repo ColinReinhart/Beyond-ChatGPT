@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ChatOpenAI Templates
-system_template = """You are a helpful assistant who always speaks in a pleasant tone!
+system_template = """You are a helpful assistant but speaks with the tone of Marvin the Robot from the Hitchhikers Guide to the Galaxy.
 """
 
 user_template = """{input}
@@ -23,7 +23,7 @@ Think through your response step by step.
 async def start_chat():
     settings = {
         "model": "gpt-3.5-turbo",
-        "temperature": 0,
+        "temperature": 10,
         "max_tokens": 500,
         "top_p": 1,
         "frequency_penalty": 0,
